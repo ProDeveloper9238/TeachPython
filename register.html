@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<meta charset = "utf-8">
+		<link href = "style.css" rel = "stylesheet">
+		<title>Руководство по Python</title>
+		<script>
+			function sendDatas() {
+				const nickname = document.forms["register"]["nickname"].value;
+				const email = document.forms["register"]["email"].value;
+				const firstPassword = document.forms["register"]["firstPassword"].value;
+				const secondPassword = document.forms["register"]["secondPassword"].value;
+				
+				if ((nickname !== "") && (email !== "") && (firstPassword !== "") && (secondPassword !== "") && (firstPassword === secondPassword)) {
+					document.getElementById("register").innerHTML = "Вы были успешно зарегистрированы!"	;		 
+				} else if (nickname === "") {
+					document.getElementById("error").innerHTML = "Введите имя пользователя!";
+				} else if (email === "") {
+					document.getElementById("error").innerHTML = "Введите адрес э-почты!";
+				} else if (firstPassword === "") {
+					document.getElementById("error").innerHTML = "Введите пароль!";
+				} else if (secondPassword === "") {
+					document.getElementById("error").innerHTML = "Введите подтверждение пароля!";
+				} else if (firstPassword !== secondPassword) {
+					document.getElementById("error").innerHTML = "Ошибка ввода паролей!";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<table style = "width:100%;">
+			<tr>
+				<td style = "width:20%;">
+					<br>
+					<a href = "index.html"><div class = "mainButtons">Главная</div></a>
+					<a href = "developer.html"><div class = "mainButtons">Разработчик</div></a>
+					<a href = "register.html"><div class = "mainButtonOnPage">Регистрация</div></a>
+					<a href = "login.html"><div class = "mainButtons">Вход</div></a>
+					<a href = "content.html"><div class = "mainButtons">Оглавление</div></a>		
+					<a href = "materials/variables.html"><div class = "mainButtonsSmall">Переменные</div></a>
+					<a href = "materials/datasinputandoutput.html"><div class = "mainButtonsSmall">Ввод и вывод данных</div></a>
+					<a href = "materials/workwithnumbers.html"><div class = "mainButtonsSmall">Работа с числами</div></a>
+					<a href = "materials/firstprogram.html"><div class = "mainButtonsSmall">Программа №1</div></a>
+					<a href = "materials/workwithstrings.html"><div class = "mainButtonsSmall">Работа со строками</div></a>
+				</td>
+				<td style = "width:50%;">
+					<h1>Регистрация</h1>
+					<hr>
+
+					<form name = "register" id = "register">
+						Имя пользователя:<br>
+						<input type = "text" class = "formInput" name = "nickname"><br>
+						Адрес э-почты (по желанию):<br>
+						<input type = "text" class = "formInput" name = "email"><br>
+						Пароль:<br>
+						<input type = "password" class = "formInput" name = "firstPassword"><br>
+						Подтвердить пароль:<br>
+						<input type = "password" class = "formInput" name = "secondPassword"><br>
+						<p id = "error" style = "color:red;"></p>
+						<div onclick = "sendDatas()" class = "formSend">Отправить</div>					
+					</form>
+					<hr>
+				</td>
+				<td style = "width:30%;">
+					
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

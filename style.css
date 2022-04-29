@@ -1,0 +1,144 @@
+body {
+	background-color:#f7deb2;
+	font-family:Comic Sans MS;
+	animation:changeColor 20s infinite;
+}
+
+h1 {
+	text-align:center;
+}
+
+p {
+	text-align:justify;
+}
+
+hr {
+	height:4px;
+	background-color:black;
+	border:black;
+}
+
+a {
+	color:black;
+	text-decoration:none;
+}
+
+td {
+	vertical-align:top;
+}
+
+span {
+	color:slateblue;
+}
+
+pre {
+	font-size:17px;
+}
+
+.mainButtons {
+	background-color:#b4c97d;
+	height:30px;
+	width:90%;
+	border-radius:4px;
+	border:3px solid #819451;
+	text-align:center;
+	font-size:19px;
+}
+
+.mainButtons:hover {
+	background-color:#819451;
+}
+
+.mainButtonsSmall {
+	background-color:#b4c97d;
+	height:30px;
+	width:75%;
+	border-radius:4px;
+	border:3px solid #819451;
+	text-align:center;
+	font-size:19px;
+	margin-left:7%;
+}
+
+.mainButtonsSmall:hover {
+	background-color:#819451;
+}
+
+.mainButtonOnPage {
+	background-color:#a81d39;
+	height:30px;
+	width:90%;
+	border-radius:4px;
+	border:3px solid #8a152c;
+	text-align:center;
+	font-size:19px;
+}
+
+.mainButtonOnPage:hover {
+	background-color:#8a152c;
+}
+
+.mainButtonSmallOnPage {
+	background-color:#a81d39;
+	height:30px;
+	width:75%;
+	border-radius:4px;
+	border:3px solid #8a152c;
+	text-align:center;
+	font-size:19px;
+	margin-left:7%;
+}
+
+.mainButtonSmallOnPage:hover {
+	background-color:#8a152c;
+}
+
+.formInput {
+	width:50%;
+	background-color:#b4c97d;
+	border-radius:4px;
+	border:3px solid #819451;
+	height:19px;
+	font-size:20px;
+	margin-top:3px;
+}
+
+.formInput:hover {
+	background-color:#819451;
+}
+
+.formInput:focus {
+	background-color:#a81d39;
+	border:3px solid #8a152c;
+	outline:none;
+}
+
+.formInput:hover:focus {
+	background-color:#8a152c;
+	border:3px solid #8a152c;
+}
+
+.formSend {
+	background-color:#b4c97d;
+	height:25px;
+	width:25%;
+	border-radius:4px;
+	border:3px solid #819451;
+	text-align:center;
+	font-size:17px;
+	font-family:Comic Sans MS;
+}
+
+.formSend:hover {
+	background-color:#819451;
+}
+
+@keyframes changeColor {
+	0% {
+		background-color:#f7deb2;
+	} 50% {
+		background-color:#dbbf8c;
+	} 100% {
+		background-color:#f7deb2;
+	}	
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<meta charset = "utf-8">
+		<link href = "../style.css" rel = "stylesheet">
+		<title>Руководство по Python</title>
+	</head>
+	<body>
+		<table style = "width:100%;">
+			<tr>
+				<td style = "width:20%;">
+					<br>
+					<a href = "../index.html"><div class = "mainButtons">Главная</div></a>
+					<a href = "../developer.html"><div class = "mainButtons">Разработчик</div></a>
+					<a href = "../register.html"><div class = "mainButtons">Регистрация</div></a>
+					<a href = "../login.html"><div class = "mainButtons">Вход</div></a>
+					<a href = "../content.html"><div class = "mainButtons">Оглавление</div></a>
+					<a href = "variables.html"><div class = "mainButtonsSmall">Переменные</div></a>
+					<a href = "datasinputandoutput.html"><div class = "mainButtonsSmall">Ввод и вывод данных</div></a>
+					<a href = "workwithnumbers.html"><div class = "mainButtonsSmall">Работа с числами</div></a>
+					<a href = "firstprogram.html"><div class = "mainButtonsSmall">Программа №1</div></a>
+					<a href = "workwithstrings.html"><div class = "mainButtonSmallOnPage">Работа со строками</div></a>
+				</td>
+				<td style = "width:50%;">
+					<h1>Руководство по Python</h1>
+					<hr>
+
+					<h2>Работа со строками</h2>
+					<p>
+						В python помимо чисел, можно работать со строками. Строки
+						можно конкатенировать, разбивать на части,
+						доставать определенные элементы, шифровать и т.д.
+					</p>
+
+					<ol>
+						<li>
+							Конкатенация
+							<blockquote>
+								<p>
+									Конкатенация - это склеивание двух или более строк. Например,
+									конкатенация строк <span style = "color:green;">"микро"</span> и <span style = "color:green;">"мир"</span>,
+									то есть <span style = "color:green;">"микро"</span> <span style = "color:red;">+</span>
+									 <span style = "color:green;">"мир"</span> 
+									--&gt; <span style = "color:green;">"микромир"</span> или <span style = "color:green;">"abcde"</span>
+									<span style = "color:red;">+</span> <span style = "color:green;">"12345"</span>
+									--&gt; <span style = "color:green;">"abcde12345"</span>
+								</p>
+							</blockquote>
+						</li>
+						
+						<li>
+							Индексация
+							<blockquote>
+								<p>
+									Из строки можно доставать определенные элементы по их индексам.
+									Индекс это порядковый номер символа в строке. Нумерация начинается с нуля,
+									например <span style = "color:green;">"hello"</span> --&gt;
+									<span style = "color:green;">"h</span><small><sub>0</sub></small>
+									<span style = "color:green;">e</span><small><sub>1</sub></small>
+									<span style = "color:green;">l</span><small><sub>2</sub></small>
+									<span style = "color:green;">l</span><small><sub>3</sub></small>
+									<span style = "color:green;">o</span><small><sub>4</sub></small>".
+									Логично, что мы можем доставать значение по индексу.
+								</p>
+								
+								<i>Пример кода:</i>
+								<pre>
+    text <span style = "color:red;">=</span> <span style = "color:green;">"Hello, world!"</span>
+    char1 <span style = "color:red;">=</span> text[<span>4</span>]
+    char2 <span style = "color:red;">=</span> text[<span>7</span>]
+    <span>print</span>(char1)
+    <span>print</span>(char2)
+    <span>print</span>(text[<span>9</span>])</pre>
+								
+								
+								<i>Результат на экране:</i>
+								<pre>
+    o
+    w
+    r</pre>			
+							</blockquote>
+						</li>
+						
+						<li>
+							Срезы
+							<blockquote>
+								<p>
+									Помимо того, что можно достать один символ, можно достать и строку.
+									То есть 1, 2, 3, 4 или сколько угодно символов. Для того, что бы
+									получить строку нажно написать название переменной и открыть квадратные
+									скобочки, например string[<span>3</span>:
+									<span>6</span>]. Будут вырезаны все символа от первого
+									(включительно) значения до второго (не включительно). Также можно указать
+									третие значение - шаг. Шаг - это количество символов, через которое будет браться
+									следующий. По умолчанию стоит <span>1</span>,
+									но можно изменить на любое другое значение.
+								</p>
+								
+								<i>Пример кода:</i>					
+								<pre>
+    text <span style = "color:red;">=</span> <span style = "color:green;">"Hello, world!"</span>
+    chars <span style = "color:red;">=</span> text[<span>1</span>:<span>4</span>]
+    <span>print</span>(chars)
+    <span>print</span>(text[<span>3</span>:<span>6</span>])
+    <span>print</span>(text[:<span>4</span>])
+    <span>print</span>(text[<span>2</span>:])
+    <span>print</span>(text[::<span>2</span>])</pre>				
+								
+								<i>Результат на экране:</i>
+								<pre>
+    ell
+    lo,
+    Hell
+    llo, world!
+    Hlo ol!</pre>
+								
+							</blockquote>
+						</li>
+						
+						<li>
+							ASCII таблицы
+							<blockquote>
+								<a href = "https://www.asciitable.com"><img src = "../images/ASCIItable.png" style = "height:100%; width:100%;" alt></a>
+								<p>
+									У каждого символа в компьютере есть свой порядковый номер. Эти номера
+									записаны в таблицу, которая называется ASCII. Выше представленны
+									первые 127 символов этой таблицы. Номера символа можно получать с помощью функции
+									<span>ord</span>(), а получать символы из числа с помощью функции
+									<span>chr</span>().
+								</p>
+								
+								<i>Пример кода:</i>				
+								<pre>
+    character <span style = "color:red;">=</span> <span>chr</span>(<span>97</span>)
+    <span>print</span>(character)
+    <span>print</span>(<span>chr</span>(<span>49</span>))
+    <span>print</span>(<span>chr</span>(<span>65</span>))
+    <span>print</span>(<span>chr</span>(<span>72</span>) <span style = "color:red;">+</span> <span>chr</span>(<span>105</span>))</pre>
+
+								<i>Результат на экране:</i>
+								<pre>
+    a
+    1
+    A
+    Hi</pre>
+							</blockquote>
+						</li>
+					</ol>
+
+					<hr>
+				</td>
+				<td style = "width:30%;">
+					
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

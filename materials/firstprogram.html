@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<meta charset = "utf-8">
+		<link href = "../style.css" rel = "stylesheet">
+		<title>Руководство по Python</title>
+	</head>
+	<body>
+		<table style = "width:100%;">
+			<tr>
+				<td style = "width:20%;">
+					<br>
+					<a href = "../index.html"><div class = "mainButtons">Главная</div></a>
+					<a href = "../developer.html"><div class = "mainButtons">Разработчик</div></a>
+					<a href = "../register.html"><div class = "mainButtons">Регистрация</div></a>
+					<a href = "../login.html"><div class = "mainButtons">Вход</div></a>
+					<a href = "../content.html"><div class = "mainButtons">Оглавление</div></a>
+					<a href = "variables.html"><div class = "mainButtonsSmall">Переменные</div></a>
+					<a href = "datasinputandoutput.html"><div class = "mainButtonsSmall">Ввод и вывод данных</div></a>
+					<a href = "workwithnumbers.html"><div class = "mainButtonsSmall">Работа с числами</div></a>
+					<a href = "firstprogram.html"><div class = "mainButtonSmallOnPage">Программа №1</div></a>
+					<a href = "workwithstrings.html"><div class = "mainButtonsSmall">Работа со строками</div></a>
+				</td>
+				<td style = "width:50%;">
+					<h1>Руководство по Python</h1>
+					<hr>
+
+					<h2>Программа №1</h2>
+					<p>
+						Создадим вашу первую программу. Нужно понимать, что у каждой задачи в программировании
+						есть много разных решений.
+					</p>
+
+					<i>Задание:</i>
+					<p>
+						Спросить у пользователя 2 числа и вывести их сумму.
+					</p>
+
+					<i>Решение:</i>
+					<pre>
+    a <span style = "color:red;">=</span> <span>input</span>(<span style = "color:green;">"Введите первое число --> "</span>)
+    b <span style = "color:red;">=</span> <span>input</span>(<span style = "color:green;">"Введите второе число --> "</span>)	
+    summa <span style = "color:red;">=</span> a <span style = "color:red;">+</span> b
+    <span>print</span>(summa)</pre>
+					
+					<i>Результат на экране:</i>
+					<pre>
+    Введите первое число --> 12
+    Введите второе число --> 15
+    1215</pre>
+
+			    	<p>
+			    		Почему так произошло? Это произошло из-за того, что при вводе через функцию
+						<span>input</span> все введенные данные python воспринимает как строки. Это значит 
+						то, что суммируются строки, а не числа. Что бы это исправить, надо использовать
+						функцию <span>int</span>. Эта функция переводит строки в числа, например,
+						<span style = "color:green;">"12"</span> --&gt; <span>12</span>.
+						Но нужно быть внимательным, так как python не может перевести символы (буквы, 
+						знаки и другое, что не связано с числами) в числа. Значит 
+						<span>int</span>(<span style = "color:green;">"abc"</span>) --&gt; ошибка.
+			    	</p>
+
+			    	<i>Решение:</i>
+					<pre>
+    a <span style = "color:red;">=</span> <span>int</span>(<span>input</span>(<span style = "color:green;">"Введите первое число --> "</span>))
+    b <span style = "color:red;">=</span> <span>int</span>(<span>input</span>(<span style = "color:green;">"Введите второе число --> "</span>))
+    summa <span style = "color:red;">=</span> a <span style = "color:red;">+</span> b
+    <span>print</span>(summa)</pre>
+
+			    	<i>Результат на экране:</i>								
+					<pre>
+    Введите первое число --> 12
+    Введите второе число --> 15
+    27</pre>	
+									
+					<hr>
+				</td>
+				<td style = "width:30%;">
+					
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
